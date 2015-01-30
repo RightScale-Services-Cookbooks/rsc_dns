@@ -75,20 +75,18 @@ Vagrant.configure("2") do |config|
   # config.berkshelf.except = []
 
   config.vm.provision :chef_solo do |chef|
-    chef.log_level='debug'
+    chef.log_level='info'
     chef.json = {
       :vagrant => {
         :box_name => 'dns'
       },
       rsc_dns: {
         choice: "dme",
-        fqdn: 'foobar.prod.rs.hello.com',
+        fqdn: 'foobar.prod.rs.example.com',
         ip_address: "33.33.33.10",
         dns_id: '18128518',
-        #access_key: 'fb8564bc-e315-4338-9c50-de87271b9768',
-        #secret_access_key: 'a7d66848-8751-485f-8dc9-3bc4faa28f49',
-        access_key: 'helloops',
-        secret_access_key: 'H3llo8698'
+        access_key: 'foo',
+        secret_access_key: 'bar'
       },
       cloud:{
         provider: 'vagrant',
