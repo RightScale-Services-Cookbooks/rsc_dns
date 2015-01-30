@@ -1,4 +1,10 @@
-# rsc_mysql_aws cookbook
+# rsc_dns cookbook
+
+This cookbook is used to update dns records 
+### providers
+* DNS Made Easy api 2.0
+* Google
+* AWS Route 53
 
 # Requirements
 
