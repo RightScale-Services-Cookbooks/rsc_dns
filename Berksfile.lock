@@ -1,0 +1,33 @@
+{
+  "sources": {
+    "rsc_dns": {
+      "path": "."
+    },
+    "dns": {
+      "locked_version": "0.1.3",
+      "git": "git://github.com/rightscale-cookbooks-contrib/dns.git",
+      "ref": "711a041d3c7cdb20156099b054f10905c1841d89"
+    },
+    "apt": {
+      "locked_version": "2.6.0"
+    },
+    "yum-epel": {
+      "locked_version": "0.4.0"
+    },
+    "hosts_file": {
+      "locked_version": "0.1.4"
+    },
+    "build-essential": {
+      "locked_version": "2.1.3"
+    },
+    "xml": {
+      "locked_version": "1.2.9"
+    },
+    "chef-sugar": {
+      "locked_version": "2.5.0"
+    },
+    "yum": {
+      "locked_version": "3.3.2"
+    }
+  }
+}
