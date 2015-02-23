@@ -30,7 +30,8 @@ unless skip_dns.include?(node['rsc_dns']['choice'])
     #domain_name = 'rs.hello.com'
     log "Setting DNS entry for the server FQDN #{node['rsc_dns']['fqdn']}..."
     dns dns_name do
-      provider node['rsc_dns']['dns_provider']
+      provider node['rsc_dns']['provider']
+      dns_provider node['rsc_dns']['dns_provider']
       domain domain_name
       credentials( node['rsc_dns']['credentials'])
       entry_value node['rsc_dns']['ip_address']
