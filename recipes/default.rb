@@ -30,6 +30,7 @@ unless skip_dns.include?(node['rsc_dns']['choice'])
     #domain_name = 'rs.hello.com'
     log "Setting DNS entry for the server FQDN #{node['rsc_dns']['fqdn']}..."
     dns dns_name do
+      cookbook node['rsc_dns']['cookbook']
       provider node['rsc_dns']['provider']
       dns_provider node['rsc_dns']['dns_provider']
       domain domain_name
