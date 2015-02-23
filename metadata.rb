@@ -4,12 +4,12 @@ maintainer_email 'premium@rightscale.com'
 license          'Apache 2.0'
 description      'Installs/Configures rsc_mysql_aws'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.0'
+version          '0.1.1'
 
 depends 'dns', '~> 0.1.3'
 
 recipe "rsc_dns::default", "Update DNS with with IP"
-#recipe "rsc_dns::aws", "Update DNS with with IP"
+recipe "rsc_dns::aws", "Update DNS with with IP"
 
 attribute 'rsc_dns/ip_address',
   :display_name => 'IP address ',

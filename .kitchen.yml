@@ -23,8 +23,23 @@ platforms:
     box_url: https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_centos-6.4_provisionerless.box
 
 suites:
-  - name: primary
+  - name: aws
     run_list:
-      - recipe["rsc_dns::aws"]
-      - recipe["dns::default"]
+      - recipe["rsc_dns::default"]
     attributes:
+      rsc_dns:
+        choice: "aws"
+        access_key: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+        secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+  - name: dme
+    run_list:
+      - recipe["rsc_dns::default"]
+    attributes:
+      rsc_dns:
+        choice: "dme"
+  - name: dme2
+    run_list:
+      - recipe["rsc_dns::default"]
+    attributes:
+      rsc_dns:
+        choice: "dme2"
