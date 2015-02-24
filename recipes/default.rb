@@ -27,10 +27,15 @@ unless skip_dns.include?(node['rsc_dns']['choice'])
     # Get the dns name and domain name from the FQDN. Split the FQDN into 2 parts
     dns_name, domain_name = node['rsc_dns']['fqdn'].split('.', 2)
     #dns_name ='foo.bar'
-    #domain_name = 'rs.hello.com'
+    #domain_name = 'rs.example.com'
+    case node['rsc_dns']['dns_provider']
+    when "aws"
+      dns_name="#{dns_name}.#{domain_name}."
+    end
     log "Setting DNS entry for the server FQDN #{node['rsc_dns']['fqdn']}..."
     dns dns_name do
-      provider node['rsc_dns']['dns_provider']
+      provider node['rsc_dns']['provider'] unless node['rsc_dns']['provider'].nil?
+      dns_provider node['rsc_dns']['dns_provider']
       domain domain_name
       credentials( node['rsc_dns']['credentials'])
       entry_value node['rsc_dns']['ip_address']
