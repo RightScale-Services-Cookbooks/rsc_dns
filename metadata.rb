@@ -9,7 +9,6 @@ version          '0.1.1'
 depends 'dns', '~> 0.1.3'
 
 recipe "rsc_dns::default", "Update DNS with with IP"
-recipe "rsc_dns::aws", "Update DNS with with IP"
 
 attribute 'rsc_dns/ip_address',
   :display_name => 'IP address ',
