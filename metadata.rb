@@ -37,7 +37,7 @@ attribute 'rsc_dns/secret_access_key',
 attribute 'rsc_dns/choice',
   :display_name => 'Choose the DNS Provider',
   :description => "The DNS provider. dme is the DNS Made Easy basic account, dme2 required Business account",
-  :choice=> ["dme","dme2","aws","google"]
+  :choice=> ["dme","dme2","aws","google"],
   :required => 'required',
   :recipes => ['rsc_dns::default']
 
