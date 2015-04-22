@@ -1,5 +1,5 @@
 # rsc_dns cookbook
-Use this cookbook to dynamicly update DNS providers with the servers private or public IP.  
+Use this cookbook to dynamicly update the DNS managed by Dynamic DNS providers with the servers private or public IP.  
 
 ### providers
 * DNS Made Easy api 2.0, choice: dme2
