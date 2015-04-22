@@ -4,7 +4,7 @@ Use this cookbook to dynamicly update the DNS managed by Dynamic DNS providers w
 ### Providers
 * DNS Made Easy api 2.0, choice: dme2
 * DNS Made Easy 1.0 API, choice: dme
-* AWS Route 53, aws
+* AWS Route 53, choice: aws
 
 ### Requirements
 Uses this dns cookbook: https://github.com/rightscale-cookbooks-contrib/dns.git
