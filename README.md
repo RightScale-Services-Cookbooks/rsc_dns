@@ -1,7 +1,7 @@
 # rsc_dns cookbook
 Use this cookbook to dynamicly update the DNS managed by Dynamic DNS providers with the servers private or public IP.  
 
-### providers
+### Providers
 * DNS Made Easy api 2.0, choice: dme2
 * DNS Made Easy 1.0 API, choice: dme
 * AWS Route 53, aws
